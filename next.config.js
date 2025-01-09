@@ -31,10 +31,6 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: false,
   },
-  onError: (err) => {
-    console.error('Next.js build error:', err)
-    process.exit(1)
-  },
   env: {
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
   },

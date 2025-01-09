@@ -2,7 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm ci --omit=dev --no-scripts",
+  "installCommand": "npm ci",
   "framework": "nextjs",
   "regions": ["gru1"],
   "headers": [
