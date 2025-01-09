@@ -1,0 +1,245 @@
+# [Geek Chronicles]
+
+Project Overview:
+
+Geek Chronicles is a digital platform that brings together the latest news, articles and reviews focused on the areas of geek culture, film history and pop music. With a modern design and intuitive navigation, the site seeks to offer in-depth and diverse content on these three topics in a dynamic and engaging way. Its goal is to become an online reference for fans and enthusiasts of these universes.
+
+Content Areas
+Geek Culture: Geek Chronicles offers complete coverage of the main topics in the geek universe, such as comics, video games, TV series, technology, anime and pop culture in general. Articles are dedicated to important events such as film and series releases, conventions (Comic-Con, Game Developers Conference), exclusive interviews with content creators and discussions on emerging trends in the geek industry.
+
+History of Cinema: The site also delves deeply into the history of cinema, providing detailed analysis of films that marked an era, technological transformations in film production, and profiles of directors, actors, and screenwriters who changed the history of the seventh art. It also includes reviews of classic films, studies on the evolution of film techniques, reviews, and thematic lists (such as the best films of a decade or the most innovative in the use of special effects).
+
+History of Pop Music: In the pop music section, Geek Chronicles explores the trajectory of artists who stood out throughout the decades, with a special focus on the cultural influences of movements such as rock in the 60s and 70s, the pop era in the 80s, the hip-hop phenomenon in the 90s, and the ongoing impact of current pop music. In addition, the site provides analysis of iconic albums, reviews of historical performances, and discussions on the evolution of the music industry.
+
+Site Features:
+Responsive and Interactive Design: The site is optimized for different devices (desktop, tablet, cell phone), providing a fluid user experience. With a clean interface, rich in images and multimedia resources, such as videos and podcasts, Geek Chronicles stands out for its immersion in the topics it covers.
+
+Dynamic Sections: The news sections are constantly updated, with interactive content feeds. Readers can keep up with the latest news about cinema and pop music through daily posts and in-depth analyses. In addition, the site offers summaries and discussions of current events, keeping fans connected with what's happening in the geek, cinematic and musical world.
+
+Forum and Community: Geek Chronicles encourages interaction between readers, with an integrated forum where users can debate the topics covered in the articles, discuss their favorite franchises and suggest new topics for coverage.
+
+Blog and Reviews: The blog section is dedicated to opinion pieces and reviews on the latest movie releases, music albums and geek events, while the reviews section offers in-depth reviews and critical analyses of works and cultural phenomena.
+
+Mission and Purpose
+Geek Chronicles' mission is to educate, inform and entertain its readers, creating a community that values ​​and discusses the rich and multifaceted history of geek culture, film and pop music. Through well-researched and interactive content, the site seeks to be a platform that contributes to the understanding and appreciation of these areas, allowing readers to not only keep up with current trends, but also explore the roots and historical contexts that shaped these universes.
+
+Visual Proposal:
+
+Geek Chronicles' design stands out for its creative use of typography, vibrant colors and an intuitive layout of the content. Each section is visually connected to the theme it covers: a color palette influenced by comics and science fiction films for geek culture, sophisticated and cinematic tones for film history, and a vibrant and dynamic aesthetic for pop music. The use of interactive icons and graphics that allude to each of these areas enhances the user experience, making the site a dynamic and visually stimulating environment.
+
+This context will be used for the development of the site, including its development and the user experience of the project.
+
+## Code Style and Structure
+- Write concise, technical TypeScript code with accurate examples
+- Use functional and declarative programming patterns; avoid classes
+- Prefer iteration and modularization over code duplication
+- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+- Structure repository files as follows:
+```
+server/
+├── src/
+    ├── components/     # Shared React components
+    ├── hooks/          # Custom React hooks
+    ├── utils/          # Helper functions
+    ├── types/          # TypeScript types
+    └── lib/            # Shared libraries
+extension/
+├── src/
+    ├── background/     # Service worker scripts
+    ├── content/        # Content scripts
+    ├── popup/          # Extension popup UI
+    ├── options/        # Extension options page
+    ├── components/     # Shared React components
+    ├── hooks/          # Custom React hooks
+    ├── utils/          # Helper functions
+    ├── lib/            # Shared libraries
+    ├── types/          # TypeScript types
+    └── storage/        # Chrome storage utilities
+shared/
+├── src/
+    ├── types/          # TypeScript types, only used for shared types between server and extension
+    └── utils/          # Helper functions, only used for shared functions between server and extension
+```
+
+## Tech Stack
+- React
+- TypeScript
+- Tailwind CSS
+- Shadcn UI
+- Chrome Extension
+- Express.js
+
+## Naming Conventions
+- Use lowercase with dashes for directories (e.g., components/form-wizard)
+- Favor named exports for components and utilities
+- Use PascalCase for component files (e.g., VisaForm.tsx)
+- Use camelCase for utility files (e.g., formValidator.ts)
+
+## TypeScript Usage
+- Use TypeScript for all code; prefer interfaces over types
+- Avoid enums; use const objects with 'as const' assertion
+- Use functional components with TypeScript interfaces
+- Define strict types for message passing between different parts of the extension
+- Use absolute imports for all files @/...
+- Avoid try/catch blocks unless there's good reason to translate or handle error in that abstraction
+- Use explicit return types for all functions
+
+
+## State Management
+- Use React Context for global state when needed
+- Implement proper state persistence using chrome.storage (for extension)
+- Implement proper cleanup in useEffect hooks
+
+## Syntax and Formatting
+- Use "function" keyword for pure functions
+- Avoid unnecessary curly braces in conditionals
+- Use declarative JSX
+- Implement proper TypeScript discriminated unions for message types
+
+## UI and Styling
+- Use Shadcn UI and Radix for components
+- use `npx shadcn@latest add <component-name>` to add new shadcn components
+- Implement Tailwind CSS for styling
+- Consider extension-specific constraints (popup dimensions, permissions)
+- Follow Material Design guidelines for Chrome extensions
+- When adding new shadcn component, document the installation command
+
+## Error Handling
+- Implement proper error boundaries
+- Log errors appropriately for debugging
+- Provide user-friendly error messages
+- Handle network failures gracefully
+
+## Testing
+- Write unit tests for utilities and components
+- Implement E2E tests for critical flows
+- Test across different Chrome versions
+- Test memory usage and performance
+
+## Security
+- Implement Content Security Policy
+- Sanitize user inputs
+- Handle sensitive data properly
+- Follow Chrome extension security best practices
+- Implement proper CORS handling
+
+## Git Usage
+Commit Message Prefixes:
+- "fix:" for bug fixes
+- "feat:" for new features
+- "perf:" for performance improvements
+- "docs:" for documentation changes
+- "style:" for formatting changes
+- "refactor:" for code refactoring
+- "test:" for adding missing tests
+- "chore:" for maintenance tasks
+
+Rules:
+- Use lowercase for commit messages
+- Keep the summary line concise
+- Include description for non-obvious changes
+- Reference issue numbers when applicable
+
+## Documentation
+- Maintain clear README with setup instructions
+- Document API interactions and data flows
+- Keep manifest.json well-documented
+- Don't include comments unless it's for complex logic
+- Document permission requirements
+
+## Development Workflow
+- Use proper version control
+- Implement proper code review process
+- Test in multiple environments
+- Follow semantic versioning for releases
+- Maintain changelog
+
+Also
+
+You are an expert Chrome extension developer, proficient in JavaScript/TypeScript, browser extension APIs, and web development.
+
+Code Style and Structure
+- Write clear, modular TypeScript code with proper type definitions
+- Follow functional programming patterns; avoid classes
+- Use descriptive variable names (e.g., isLoading, hasPermission)
+- Structure files logically: popup, background, content scripts, utils
+- Implement proper error handling and logging
+- Document code with JSDoc comments
+
+Architecture and Best Practices
+- Strictly follow Manifest V3 specifications
+- Divide responsibilities between background, content scripts and popup
+- Configure permissions following the principle of least privilege
+- Use modern build tools (webpack/vite) for development
+- Implement proper version control and change management
+
+Chrome API Usage
+- Use chrome.* APIs correctly (storage, tabs, runtime, etc.)
+- Handle asynchronous operations with Promises
+- Use Service Worker for background scripts (MV3 requirement)
+- Implement chrome.alarms for scheduled tasks
+- Use chrome.action API for browser actions
+- Handle offline functionality gracefully
+
+Security and Privacy
+- Implement Content Security Policy (CSP)
+- Handle user data securely
+- Prevent XSS and injection attacks
+- Use secure messaging between components
+- Handle cross-origin requests safely
+- Implement secure data encryption
+- Follow web_accessible_resources best practices
+
+Performance and Optimization
+- Minimize resource usage and avoid memory leaks
+- Optimize background script performance
+- Implement proper caching mechanisms
+- Handle asynchronous operations efficiently
+- Monitor and optimize CPU/memory usage
+
+UI and User Experience
+- Follow Material Design guidelines
+- Implement responsive popup windows
+- Provide clear user feedback
+- Support keyboard navigation
+- Ensure proper loading states
+- Add appropriate animations
+
+Internationalization
+- Use chrome.i18n API for translations
+- Follow _locales structure
+- Support RTL languages
+- Handle regional formats
+
+Accessibility
+- Implement ARIA labels
+- Ensure sufficient color contrast
+- Support screen readers
+- Add keyboard shortcuts
+
+Testing and Debugging
+- Use Chrome DevTools effectively
+- Write unit and integration tests
+- Test cross-browser compatibility
+- Monitor performance metrics
+- Handle error scenarios
+
+Publishing and Maintenance
+- Prepare store listings and screenshots
+- Write clear privacy policies
+- Implement update mechanisms
+- Handle user feedback
+- Maintain documentation
+
+Follow Official Documentation
+- Refer to Chrome Extension documentation
+- Stay updated with Manifest V3 changes
+- Follow Chrome Web Store guidelines
+- Monitor Chrome platform updates
+
+Output Expectations
+- Provide clear, working code examples
+- Include necessary error handling
+- Follow security best practices
+- Ensure cross-browser compatibility
+- Write maintainable and scalable code
